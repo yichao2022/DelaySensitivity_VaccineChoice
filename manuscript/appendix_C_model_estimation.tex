@@ -35,7 +35,7 @@ V_{njt} ={}& \beta_{\text{wait},n}\, \text{WaitTime}^{\text{std}}_{jt}
 
 \subsection*{C2. Mixed logit estimation}
 
-Preference heterogeneity is modeled via normally distributed random coefficients on waiting time, vaccine efficacy, side effects, and cash incentives. The model is estimated by simulated maximum likelihood with 400 simulation draws. Within-respondent correlation across the six choice tasks arises from the random coefficient together with the panel specification of the likelihood: because $\beta_{\text{wait},n}$ is constant across tasks for a given respondent, the joint probability of respondent $n$'s observed sequence of choices is computed by integrating the product of per-task logit probabilities over the mixing distribution,
+Preference heterogeneity is modeled via a normally distributed random coefficient on waiting time. The model is estimated by simulated maximum likelihood with 500 Halton draws. Within-respondent correlation across the six choice tasks arises from the random coefficient together with the panel specification of the likelihood: because $\beta_{\text{wait},n}$ is constant across tasks for a given respondent, the joint probability of respondent $n$'s observed sequence of choices is computed by integrating the product of per-task logit probabilities over the mixing distribution,
 
 \[
 L_n(\theta) = \int \prod_{t=1}^{6} \left[ \frac{\exp(V_{n c_{nt} t}(\beta_{\text{wait},n}))}{\sum_{j \in J_{nt}} \exp(V_{njt}(\beta_{\text{wait},n}))} \right] \phi(\beta_{\text{wait},n}; \mu_{\text{wait}}, \sigma_{\text{wait}})\, d\beta_{\text{wait},n},
