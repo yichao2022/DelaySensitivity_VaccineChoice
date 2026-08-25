@@ -41,7 +41,7 @@ Preference heterogeneity is modeled via a normally distributed random coefficien
 L_n(\theta) = \int \prod_{t=1}^{6} \left[ \frac{\exp(V_{n c_{nt} t}(\beta_{\text{wait},n}))}{\sum_{j \in J_{nt}} \exp(V_{njt}(\beta_{\text{wait},n}))} \right] \phi(\beta_{\text{wait},n}; \mu_{\text{wait}}, \sigma_{\text{wait}})\, d\beta_{\text{wait},n},
 \]
 
-\noindent where $c_{nt}$ is respondent $n$'s chosen alternative in task $t$ and $J_{nt}$ is the choice set (A, B, opt-out). The opt-out alternative is modeled as a fixed alternative-specific constant; this identifies the average opt-out propensity but is not the source of the panel correlation, which comes from the random coefficient and the product-over-tasks likelihood above. Standard errors are clustered at the respondent level.
+\noindent where $c_{nt}$ is respondent $n$'s chosen alternative in task $t$ and $J_{nt}$ is the choice set (A, B, opt-out). The opt-out alternative is modeled as a fixed alternative-specific constant; this identifies the average opt-out propensity but is not the source of the panel correlation, which comes from the random coefficient and the product-over-tasks likelihood above. Standard errors are model-based standard errors from the panel mixed-logit likelihood.
 
 \subsection*{C3. Derived metric: marginal willingness to accept (MWTA)}
 
