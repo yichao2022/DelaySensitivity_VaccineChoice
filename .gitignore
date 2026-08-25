@@ -1,0 +1,25 @@
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.lof
+*.lot
+*.toc
+*.run.xml
+*.bcf
+*.dvi
+*.ps
+*.pdf
+_Main/
+# R
+.RData
+.Rhistory
+*.Rproj
+# OS
+.DS_Store
+Thumbs.db

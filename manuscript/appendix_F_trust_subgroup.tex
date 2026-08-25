@@ -1,0 +1,44 @@
+\section*{Appendix F. Trust Subgroup Analysis (Supplementary)}
+\label{app:F}
+
+This appendix reports the complementary trust subgroup analyses referenced in the main text. These analyses are presented for completeness and comparability with prior literature; they are interpreted as exploratory. The primary heterogeneity evidence in this study is provided by the random waiting-time coefficient in the mixed logit, as reported in the main text.
+
+\subsection*{F1. Trust Subgroup Estimates}
+
+Trust groups were defined by the five-point institutional trust scale (low: $-2$ to $-1$; neutral: $0$; high: $+1$ to $+2$; $n = 226$, $261$, and $446$, respectively). For each group, we estimated a mixed logit model with a normally distributed random coefficient on waiting time (500 Halton draws, respondent-level panel). Table~\ref{tab:trust_subgroup_mwta} reports the waiting-time coefficients and implied MWTA for each subgroup.
+
+\begin{table}[htbp]
+\centering
+\caption{Trust subgroup mixed logit estimates and implied MWTA}
+\label{tab:trust_subgroup_mwta}
+\small
+\begin{tabular}{lccc}
+\hline
+ & High trust & Low trust & Neutral trust \\
+ & ($n = 446$) & ($n = 226$) & ($n = 261$) \\
+\hline
+Waiting-time coefficient & $-0.184$ & $-0.292$ & $-0.563$ \\
+($SE$) & ($0.039$) & ($0.059$) & ($0.070$) \\
+Random-coefficient SD & $1.127$ & $1.287$ & $1.533$ \\
+MWTA (RMB/month) & 59 & 101 & 205 \\
+\hline
+\multicolumn{4}{@{}p{\textwidth}@{}}{\footnotesize \textit{Note.} Subgroup-specific mixed logit models with a normally distributed random coefficient on waiting time (500 Halton draws, respondent-level panel). MWTA converts the waiting-time coefficient to RMB/month using the full-sample scaling constants (see Appendix~E). These point estimates are descriptive; the continuous trust interaction was not statistically significant (Appendix F2), so we do not interpret subgroup differences as evidence of systematic trust moderation.}
+\end{tabular}
+\end{table}
+
+The point estimates are consistent with the main-text description of elevated delay sensitivity among neutral-trust respondents, and with an intermediate position for low-trust respondents. Given the exploratory nature of these analyses and the multiple-testing context, these subgroup estimates should be interpreted descriptively rather than as confirmatory evidence of discrete group differences.
+
+\subsection*{F2. Categorical and Continuous Interaction Specifications}
+
+We estimated two interaction specifications on the trust-complete subsample ($N = 933$). In the categorical interaction model, high trust was used as the reference category, and interaction terms were added for waiting time with low trust and neutral trust. The joint Wald test of the two interaction coefficients was $\chi^2(2) = 13.87$, $p < 0.001$; the neutral-vs-high interaction was individually significant ($z = -3.69$, $p < 0.001$, coefficient $-0.229$), while the low-vs-high interaction was not ($z = -0.72$, $p = 0.47$, coefficient $-0.045$). A likelihood-ratio comparison against the no-interaction baseline yielded LR $= 3.95$, $p = 0.14$; the difference between the Wald and LR results reflects the known sensitivity of LR statistics to simulation noise in mixed logit models with Halton draws. The substantive driver of the categorical Wald significance is the elevated neutral-vs-high coefficient; the low-vs-high contrast is null.
+
+In the continuous specification, waiting time interacted with the (centered) linear and quadratic trust score. The linear trust-by-waiting interaction was not statistically significant ($p = 0.15$), and adding a quadratic interaction did not improve fit (LR $= 1.21$, $p = 0.27$). The categorical and continuous specifications therefore diverge: the categorical specification detects the elevated neutral-vs-high contrast, while the continuous specification finds no evidence of a linear-or-quadratic trend across the full five-point trust scale. We accordingly treat the subgroup MWTA differences as exploratory, with the neutral-trust point estimate the most descriptively distinctive of the three subgroups but not robustly supported as a general trust-by-waiting mechanism.
+
+\subsection*{F3. Potential mechanisms for future testing}
+
+Several behavioral-medicine frameworks could in principle account for elevated delay sensitivity among lower-trust respondents. First, institutional trust may function as uncertainty reduction: respondents who trust the system may view delays as manageable deviations from a reliable norm, whereas those who do not may be more uncertain whether delayed protection will materialize \citep{Hardin2002}. Second, motivated processing accounts suggest that high-trust respondents minimize the perceived burden of waiting, while lower-trust respondents may disengage from the institutional offer or process delay more ``coldly'' \citep{Kahan2013,Betsch2017}. Third, reference-dependent evaluation predicts that respondents without a clear reference point for institutional delivery experience each additional month of delay as a novel loss \citep{Kahneman1979,Tversky1992}. These accounts are not mutually exclusive, and the current data do not discriminate among them; they are offered as candidate explanations for future experimental testing (e.g., manipulating institutional-reliability framing or reference points).
+
+\subsection*{F4. Interpretation and Limitations}
+
+The trust-group findings are exploratory and hypothesis-generating rather than conclusive: the point estimates are descriptively consistent with a ``neutral peak'' in delay sensitivity, but the continuous specification test did not confirm a systematic nonlinear relationship. We therefore do not interpret the subgroup MWTA differences or the candidate mechanisms as established; the random-coefficient standard deviation provides the primary evidence for population-level heterogeneity.
+\clearpage

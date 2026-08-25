@@ -1,0 +1,49 @@
+\section*{Appendix C. Model Estimation and Derived Metrics}
+\label{app:C}
+
+This appendix summarizes the modeling framework and the derived behavioral metric used in the main analysis.
+
+\subsection*{C1. Utility framework}
+
+For respondent $n$, alternative $j$, and task $t$, the utility of alternative $j$ is:
+
+\[
+U_{njt} = V_{njt} + \varepsilon_{njt},
+\]
+
+where $\varepsilon_{njt}$ is an i.i.d. type-I extreme-value error term and the systematic component is:
+
+\[
+\begin{aligned}
+V_{njt} ={}& \beta_{\text{wait},n}\, \text{WaitTime}^{\text{std}}_{jt}
+ + \beta_{\text{eff}}\, \text{Efficacy}^{\text{std}}_{jt}
+ + \beta_{\text{cash}}\, \text{Cash}^{\text{std}}_{jt} \\
+ & + \beta_{\text{se1}}\, \text{SE\_mild}_{jt} + \beta_{\text{se2}}\, \text{SE\_moderate}_{jt}
+ + \beta_{\text{origin}}\, \text{Domestic}_{jt}
+ + \beta_{\text{opt}}\, \text{ASC\_optout}_{j}.
+\end{aligned}
+\]
+
+\noindent The coding of each attribute is:
+
+\begin{itemize}
+    \item \textbf{Waiting time, efficacy, cash incentive} (continuous): each standardized to mean 0, standard deviation 1 over the full analytic sample before estimation; coefficients are therefore reported in standard-deviation units for these attributes.
+    \item \textbf{Side-effect profile} (categorical, three levels): effects-coded with two contrasts. Mild = 1, moderate = 0, severe = $-1$ for the mild contrast; moderate = 1, mild = 0, severe = $-1$ for the moderate contrast. Effects coding is used (rather than dummy coding) so that the omitted category (severe) is assigned $-1$ on both contrasts and the mean utility across the three profiles is centered at zero; the severe-profile utility is recovered as $-(\beta_{\text{se1}} + \beta_{\text{se2}})$.
+    \item \textbf{Vaccine origin} (binary): indicator equal to 1 for domestic origin and 0 for imported origin.
+    \item \textbf{Opt-out} (alternative-specific constant): $\text{ASC\_optout}_j = 1$ for the opt-out alternative and 0 for vaccine alternatives A and B.
+\end{itemize}
+
+\subsection*{C2. Mixed logit estimation}
+
+Preference heterogeneity is modeled via a normally distributed random coefficient on waiting time, $\beta_{\text{wait},n} \sim \mathcal{N}(\mu_{\text{wait}}, \sigma_{\text{wait}}^2)$; all other coefficients are treated as fixed. The model is estimated by simulated maximum likelihood with 500 Halton draws. Within-respondent correlation across the six choice tasks arises from the random coefficient together with the panel specification of the likelihood: because $\beta_{\text{wait},n}$ is constant across tasks for a given respondent, the joint probability of respondent $n$'s observed sequence of choices is computed by integrating the product of per-task logit probabilities over the mixing distribution,
+
+\[
+L_n(\theta) = \int \prod_{t=1}^{6} \left[ \frac{\exp(V_{n c_{nt} t}(\beta_{\text{wait},n}))}{\sum_{j \in J_{nt}} \exp(V_{njt}(\beta_{\text{wait},n}))} \right] \phi(\beta_{\text{wait},n}; \mu_{\text{wait}}, \sigma_{\text{wait}})\, d\beta_{\text{wait},n},
+\]
+
+\noindent where $c_{nt}$ is respondent $n$'s chosen alternative in task $t$ and $J_{nt}$ is the choice set (A, B, opt-out). The opt-out alternative is modeled as a fixed alternative-specific constant; this identifies the average opt-out propensity but is not the source of the panel correlation, which comes from the random coefficient and the product-over-tasks likelihood above. Standard errors are clustered at the respondent level.
+
+\subsection*{C3. Derived metric: marginal willingness to accept (MWTA)}
+
+The monthly monetary equivalent of reducing delay is derived from the ratio of the waiting-time coefficient to the cash-incentive coefficient, converting standardized units back to months and RMB. Full derivations and the numerical example are provided in Appendix~E.
+\clearpage

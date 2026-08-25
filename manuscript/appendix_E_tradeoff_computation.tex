@@ -1,0 +1,32 @@
+\section*{Appendix E. Trade-Off Computation and Policy Translation}
+\label{app:E}
+
+This appendix reports formulas and examples used to translate waiting-time coefficients into monetary-equivalent policy trade-offs.
+
+\subsection*{E1. MWTA calculation}
+
+The monthly monetary equivalent of reducing delay is computed from the ratio of the waiting-time coefficient to the cash-incentive coefficient, converting standardized units back to months and RMB:
+
+\[
+\text{MWTA} = -\frac{\beta_{\text{wait}}}{\beta_{\text{cash}}} \times \frac{\text{SD}_{\text{cash}}}{\text{SD}_{\text{wait}}}
+\]
+
+where $\beta_{\text{wait}}$ and $\beta_{\text{cash}}$ are the estimated coefficients on the standardized waiting-time and cash-incentive attributes, and $\text{SD}_{\text{wait}}$ (months) and $\text{SD}_{\text{cash}}$ (RMB) are the sample standard deviations of the raw attribute levels. The ratio $-\beta_{\text{wait}}/\beta_{\text{cash}}$ expresses compensation in standardized cash units per standardized month; multiplying by $\text{SD}_{\text{cash}}/\text{SD}_{\text{wait}}$ converts to RMB per month.
+
+\noindent \textbf{Source of the scaling constants.} The standardization was applied to the full estimation data frame in long format ($N = 18{,}486$ rows: 1{,}027 respondents $\times$ 6 tasks $\times$ 3 alternatives), which includes the opt-out rows. In these rows, waiting time, efficacy, side-effect profile, and cash incentive are coded as structural zeros (the opt-out offers none of the vaccine attributes). The scaling constants are therefore the sample standard deviations computed over all rows: $\text{SD}_{\text{wait}} = 2.206$ months and $\text{SD}_{\text{cash}} = 311.5$ RMB. \textbf{These are the exact scaling constants used to construct the standardized variables in the long-format estimation data, on which all reported models were estimated.}
+
+\subsection*{E2. Full-sample estimate}
+
+Using the mixed logit estimates from the main text ($\beta_{\text{wait}} = -0.297$, $\beta_{\text{cash}} = 0.424$; $\text{SD}_{\text{wait}} = 2.206$ months, $\text{SD}_{\text{cash}} = 311.5$ RMB):
+
+\[
+\text{MWTA} = -\frac{-0.297}{0.424} \times \frac{311.5}{2.206} = 0.701 \times 141.2 \approx 99 \text{ RMB/month}
+\]
+
+The delta-method 95\% confidence interval is 80--118 RMB/month (delta-method SE: 9.6 RMB/month). The present study reports MWTA only for the full-sample mixed logit. Trust-specific subgroup MWTA estimates are reported in the next section; these are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
+
+\subsection*{E3. Subgroup monetary equivalents}
+
+For completeness, we report the monthly monetary equivalents (MWTA) computed from the subgroup-specific mixed logit estimates in Appendix~F (500 Halton draws, respondent-level panel). The full-sample estimate is 99 RMB/month; subgroup estimates are 61 RMB/month (high trust), 97 RMB/month (low trust), and 210 RMB/month (neutral trust). These point estimates are descriptive: the continuous trust interaction was not statistically significant (likelihood-ratio test, $p = 0.24$), and we do not interpret the subgroup MWTA differences as evidence of systematic trust moderation.
+
+\clearpage
