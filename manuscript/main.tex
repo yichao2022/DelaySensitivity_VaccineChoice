@@ -168,7 +168,7 @@ Institutional trust was measured using a five-point scale ranging from strong di
 
 \subsection{Statistical Analysis}
 
-\textbf{Mixed Logit Specification.} We estimated conditional logit, multinomial logit, and mixed logit models to examine the effect of waiting time on vaccine choice. The mixed logit specification was used as the primary model because it accounts for unobserved preference heterogeneity across individuals. The model included a normally distributed random coefficient on waiting time, with 500 Halton draws for simulation. The opt-out alternative was modeled as a fixed alternative-specific constant (Online Supplementary Material, Section~D provides additional details on the opt-out specification). The panel structure was specified with respondent ID as the grouping variable, yielding respondent-level random effects. Standard errors are model-based standard errors from the panel mixed-logit likelihood (final log-likelihood: $-5{,}489.6$ for the mixed logit ($N = 1{,}027$ respondents; $6{,}162$ choice observations); see Table~\ref{tab:main_model} for the full set of fit indices). Model fit was assessed using AIC and BIC, with the mixed logit showing improved fit over conditional and multinomial specifications. Technical details on the utility framework, mixed logit estimation, and derived quantities are provided in the Online Supplementary Material (Section~C).
+\textbf{Mixed Logit Specification.} We estimated conditional logit, multinomial logit, and mixed logit models to examine the effect of waiting time on vaccine choice. The mixed logit specification was used as the primary model because it accounts for unobserved preference heterogeneity across individuals. The model included a normally distributed random coefficient on waiting time, with 400 simulation draws. The opt-out alternative was modeled as a fixed alternative-specific constant (Online Supplementary Material, Section~D provides additional details on the opt-out specification). The panel structure was specified with respondent ID as the grouping variable, yielding respondent-level random effects. Standard errors are model-based standard errors from the panel mixed-logit likelihood (final log-likelihood: $-5{,}489.6$ for the mixed logit ($N = 1{,}027$ respondents; $6{,}162$ choice observations); see Table~\ref{tab:main_model} for the full set of fit indices). Model fit was assessed using AIC and BIC, with the mixed logit showing improved fit over conditional and multinomial specifications. Technical details on the utility framework, mixed logit estimation, and derived quantities are provided in the Online Supplementary Material (Section~C).
 
 \textbf{Panel Structure and Standard Errors.} Because each respondent completed six choice tasks, the data have a panel structure with repeated observations at the respondent level. To account for within-respondent correlation, the mixed logit model was estimated with respondent-level random effects for waiting time. Standard errors are model-based standard errors from the panel mixed-logit likelihood; the \texttt{panel = TRUE} specification ensures that respondent-specific random coefficients are held constant across an individual's repeated choice tasks, accounting for within-respondent dependence through the random-coefficient structure rather than through a cluster-robust sandwich estimator.
 
@@ -178,7 +178,7 @@ To examine heterogeneity by institutional trust, we used two complementary appro
 
 To facilitate policy interpretation, we translated waiting-time sensitivity into marginal willingness to accept (MWTA), defined as the amount of compensation respondents would require to tolerate an additional month of waiting. MWTA was calculated for the full-sample mixed logit as the implied trade-off between waiting time and cash incentives ($-\beta_{\text{wait}}/\beta_{\text{cash}}$). Confidence intervals were derived via the delta method on the original coefficient scale. MWTA for the trust-specific subgroups is reported in the Supplementary Material; these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
 
-All analyses were conducted in R using the \texttt{mlogit} package. The mixed logit was estimated with a normally distributed random coefficient on waiting time, 500 Halton draws, and respondent-level panel structure; full coefficient estimates are reported in Table~\ref{tab:main_model}. Additional robustness analyses, technical derivations, and supplementary figures are reported in the Online Supplementary Material (Sections~A--F).
+All analyses were conducted in R using the \texttt{mlogit} package. The mixed logit was estimated with normally distributed random coefficients on waiting time, vaccine efficacy, side effects, and cash incentives, 400 simulation draws, and respondent-level panel structure; full coefficient estimates are reported in Table~\ref{tab:main_model}. Additional robustness analyses, technical derivations, and supplementary figures are reported in the Online Supplementary Material (Sections~A--F).
 
 \textbf{Design Diagnostics.} The realized design comprised eight versions (6 choice sets each, 85 unique non-opt-out profiles in total) and was approximately balanced at the attribute level, as described above. Because the fielded design was not evaluated against a formal efficiency benchmark, we make no claims regarding D-efficiency. The limited representation of some levels, particularly the 2-month waiting level, motivated our focus on main effects rather than higher-order interactions. The version-level summary is reported in Appendix B; the complete 96-row fielded design matrix is provided as a supplementary CSV.
 
@@ -210,33 +210,31 @@ Figure~\ref{fig:waiting_main} illustrates the substantive implication of this fi
  & (1) & (2) & (3) \\
  & Conditional Logit & MNL & Mixed Logit \\
 \hline
-(Intercept): B & & -0.23*** & \\
- & & (0.04) & \\
-(Intercept): C & & -0.19* & \\
- & & (0.08) & \\
-Waiting time (std) & -0.12*** & -0.10*** & -0.30*** \\
+(Intercept): B & & -0.11** & \\
+ & & (0.03) & \\
+(Intercept): C & & -0.33** & \\
+ & & (0.10) & \\
+Waiting time (std) & -0.13*** & -0.13*** & -0.42*** \\
  & (0.02) & (0.02) & (0.03) \\
-Vaccine efficacy (std) & 0.15*** & 0.17*** & 0.28*** \\
+Vaccine efficacy (std) & 0.15*** & 0.16*** & 0.29*** \\
  & (0.04) & (0.04) & (0.04) \\
-Side effects: mild (eff. coding) & -0.13*** & -0.08** & -0.25*** \\
+Side effects (std) & -0.04 & -0.08** & 0.03 \\
  & (0.03) & (0.03) & (0.03) \\
-Side effects: moderate (eff. coding) & 0.35*** & 0.40*** & 0.51*** \\
- & (0.03) & (0.03) & (0.03) \\
-Cash incentives (std) & 0.33*** & 0.31*** & 0.42*** \\
- & (0.02) & (0.02) & (0.02) \\
-Vaccine origin (domestic) & 0.30*** & 0.29*** & 0.20*** \\
+Cash incentives (std) & 0.33*** & 0.31*** & 0.46*** \\
+ & (0.02) & (0.02) & (0.03) \\
+Vaccine origin (domestic) & 0.24*** & 0.24*** & 0.07 \\
  & (0.04) & (0.04) & (0.05) \\
-Opt-out constant & -0.09 & & -0.11 \\
- & (0.08) & & (0.11) \\
-SD (waiting time) & & & 1.27*** \\
+Opt-out constant & -0.21* & & -0.32** \\
+ & (0.09) & & (0.12) \\
+SD (waiting time) & & & 1.44*** \\
  & & & (0.08) \\
 \hline
-AIC & 12,057.90 & 12,015.46 & 10,995.16 \\
-BIC & 12,112.67 & 12,078.05 & 11,057.75 \\
-Log likelihood & -6,021.95 & -5,999.73 & -5,489.58 \\
+AIC & 12,215.54 & 12,207.22 & 11,179.00 \\
+BIC & 12,262.49 & 12,262.00 & 11,257.25 \\
+Log likelihood & -6,101.77 & -6,096.61 & -5,579.50 \\
 Observations & 6,162 & 6,162 & 6,162 \\
 \hline
-\multicolumn{4}{@{}p{\textwidth}@{}}{Notes: Standard errors in parentheses. *** $p<0.001$, ** $p<0.01$, * $p<0.05$. All models estimated on the full analytic sample ($N=1{,}027$ respondents; 6{,}162 choice observations). Column 1: conditional logit with an opt-out constant. Column 2: multinomial logit with alternative-specific constants (B, C); the opt-out alternative serves as the base category. Column 3: mixed logit with a normally distributed random coefficient on waiting time, 500 Halton draws, and respondent-level panel structure.} \\
+\multicolumn{4}{@{}p{\textwidth}@{}}{Notes: Standard errors in parentheses. *** $p<0.001$, ** $p<0.01$, * $p<0.05$. All models estimated on the full analytic sample ($N=1{,}027$ respondents; 6{,}162 choice observations). Column 1: conditional logit with an opt-out constant. Column 2: multinomial logit with alternative-specific constants (B, C); the opt-out alternative serves as the base category. Column 3: mixed logit with normally distributed random coefficients on waiting time, vaccine efficacy, side effects, and cash incentives, 400 simulation draws, and respondent-level panel structure.} \\
 \end{tabularx}
 \end{table}
 
