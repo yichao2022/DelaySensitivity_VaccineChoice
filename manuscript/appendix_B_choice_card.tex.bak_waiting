@@ -11,7 +11,7 @@ Each task presents two vaccine alternatives and an opt-out. Respondents choose t
 
 The DCE included five attributes:
 \begin{itemize}
-    \item \textbf{Waiting time to vaccination:} 0, 1, 2, 3, or 6 months
+    \item \textbf{Waiting time to protection:} 0, 1, 2, 3, or 6 months
     \item \textbf{Vaccine efficacy:} 50\%, 70\%, or 95\%
     \item \textbf{Side-effect profile:} mild (fatigue 1--2 days), moderate (fever 2 days), or severe (fatigue 1 week)
     \item \textbf{Vaccine origin:} domestic or imported
