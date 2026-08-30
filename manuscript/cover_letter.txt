@@ -2,29 +2,17 @@ Dear Editor,
 
 We are pleased to submit our manuscript, "Delay Sensitivity in Stated Vaccine Choice: Evidence from a Discrete Choice Experiment in Wuhan, China," for consideration in the Journal of Behavioral Medicine.
 
-**Summary:** This study examines how waiting time before vaccination influences vaccine preferences using a discrete choice experiment (DCE) administered to 1,027 adults in Wuhan, China. Waiting time was embedded directly as a vaccine attribute, allowing us to estimate how respondents trade off waiting time against vaccine efficacy, side effects, origin, and cash incentives.
+This study examines whether waiting time before vaccination—a potentially modifiable feature of health-service delivery—shapes preventive health decision-making. Using a discrete choice experiment administered to 1,027 adults in Wuhan, China, we find that longer waiting times significantly reduce stated vaccine choice. In the primary model, increasing waiting from 0 to 6 months reduced predicted vaccination probability from 71.3% to 54.0%, a 17.3-percentage-point reduction. We also find substantial heterogeneity in waiting-time sensitivity, while moderation by institutional trust is mixed and treated as exploratory.
 
-**Key Findings:** Longer waiting times significantly reduced stated vaccine choice (β = -0.30, SE = 0.028, p < 0.001). Moving from 0 to 6 months reduced predicted vaccination probability by 17.3 percentage points (from 71.3% to 54.0%). Substantial heterogeneity in waiting-time sensitivity was observed (random-coefficient SD = 1.27), with exploratory moderation by institutional trust.
+We believe the manuscript is well suited to the Journal of Behavioral Medicine because it focuses on how a concrete feature of health-service delivery influences preventive decision-making. Rather than treating waiting time solely as an administrative constraint, the study shows that service timing remains behaviorally consequential after accounting for major vaccine attributes. The findings provide a rationale for prospectively testing reduced-delay access and other service-design interventions against actual vaccination uptake, while the manuscript carefully distinguishes stated-choice effects from real-world uptake and frames the underlying psychological mechanisms as questions for future testing.
 
-**Significance for Behavioral Medicine:** This study contributes to behavioral medicine by:
-1. Quantifying sensitivity to waiting time as a modifiable service-delivery feature of preventive health choice
-2. Characterizing heterogeneity in delay sensitivity through random-coefficient mixed logit and institutional trust subgroups
-3. Placing waiting time on the same preference scale as clinically relevant vaccine attributes
+All authors have approved the manuscript and declare no conflicts of interest. The study received appropriate institutional ethical review, and all participants provided informed consent. This manuscript is original, has not been published previously, and is not under consideration elsewhere.
 
-**Fit with JBM:** The study aligns with JBM's focus on behavioral determinants of health by treating waiting time not merely as an administrative friction but as a behavioral factor that shapes preventive decision-making under uncertainty. The findings have implications for designing timely and equitable vaccination strategies.
-
-**Declarations:** All authors have approved the manuscript and declare no conflicts of interest. Ethical approval was obtained from the Institutional Review Board at [Institution]. Informed consent was obtained from all participants.
-
-Suggested Reviewers: We suggest the following potential reviewers with relevant expertise:
-1. Esther W. de Bekker-Grob, PhD - Professor of Health Economics & Health Preferences, Erasmus School of Health Policy & Management, Erasmus University Rotterdam, Netherlands. Email: debekker-grob@eshpm.eur.nl
-2. Mickaël Hiligsmann, PhD - Professor with a chair on Health Preferences and the Economics of Prevention, Department of Health Services Research, Maastricht University, Netherlands. Email: m.hiligsmann@maastrichtuniversity.nl
-3. Yiting Huang, PhD - Department of Epidemiology and Biostatistics, School of Public Health, Guangdong Pharmaceutical University, Guangzhou, China. Email: hongbojiang3@163.com (corresponding author)
-
-Thank you for considering our manuscript. We look forward to your decision.
+Thank you for considering our manuscript.
 
 Sincerely,
 
 Yichao Jin, Ph.D.
 School of Economic, Political and Policy Sciences
 The University of Texas at Dallas
-Email: Yichao.Jin@UTDallas.edu
+Yichao.Jin@UTDallas.edu
