@@ -1,0 +1,30 @@
+Dear Editor,
+
+We are pleased to submit our manuscript, "Delay Sensitivity in Stated Vaccine Choice: Evidence from a Discrete Choice Experiment in Wuhan, China," for consideration in the Journal of Behavioral Medicine.
+
+**Summary:** This study examines how waiting time before vaccination influences vaccine preferences using a discrete choice experiment (DCE) administered to 1,027 adults in Wuhan, China. Waiting time was embedded directly as a vaccine attribute, allowing us to estimate how respondents trade off waiting time against vaccine efficacy, side effects, origin, and cash incentives.
+
+**Key Findings:** Longer waiting times significantly reduced stated vaccine choice (β = -0.30, SE = 0.028, p < 0.001). Moving from 0 to 6 months reduced predicted vaccination probability by 17.3 percentage points (from 71.3% to 54.0%). Substantial heterogeneity in waiting-time sensitivity was observed (random-coefficient SD = 1.27), with exploratory moderation by institutional trust.
+
+**Significance for Behavioral Medicine:** This study contributes to behavioral medicine by:
+1. Quantifying sensitivity to waiting time as a modifiable service-delivery feature of preventive health choice
+2. Characterizing heterogeneity in delay sensitivity through random-coefficient mixed logit and institutional trust subgroups
+3. Placing waiting time on the same preference scale as clinically relevant vaccine attributes
+
+**Fit with JBM:** The study aligns with JBM's focus on behavioral determinants of health by treating waiting time not merely as an administrative friction but as a behavioral factor that shapes preventive decision-making under uncertainty. The findings have implications for designing timely and equitable vaccination strategies.
+
+**Declarations:** All authors have approved the manuscript and declare no conflicts of interest. Ethical approval was obtained from the Institutional Review Board at [Institution]. Informed consent was obtained from all participants.
+
+Suggested Reviewers: We suggest the following potential reviewers with relevant expertise:
+1. Esther W. de Bekker-Grob, PhD - Professor of Health Economics & Health Preferences, Erasmus School of Health Policy & Management, Erasmus University Rotterdam, Netherlands. Email: debekker-grob@eshpm.eur.nl
+2. Mickaël Hiligsmann, PhD - Professor with a chair on Health Preferences and the Economics of Prevention, Department of Health Services Research, Maastricht University, Netherlands. Email: m.hiligsmann@maastrichtuniversity.nl
+3. Yiting Huang, PhD - Department of Epidemiology and Biostatistics, School of Public Health, Guangdong Pharmaceutical University, Guangzhou, China. Email: hongbojiang3@163.com (corresponding author)
+
+Thank you for considering our manuscript. We look forward to your decision.
+
+Sincerely,
+
+Yichao Jin, Ph.D.
+School of Economic, Political and Policy Sciences
+The University of Texas at Dallas
+Email: Yichao.Jin@UTDallas.edu
