@@ -123,7 +123,7 @@ Characteristic & \textit{N} & \% \\
 \end{tabularx}
 \end{table}
 
-Although the sample slightly overrepresents more highly educated respondents compared to Wuhan Census benchmarks, the study does not apply post-stratification weights; the unweighted estimates should be interpreted as conditional on the achieved sample composition.
+The sample\'s educational distribution was compared with 2020 Wuhan census benchmarks \parencite{WuhanCensus2021}: 25.5\% of the sample reported college or higher, versus 33.9\% of the resident population with tertiary education or above in the census. Because the census share covers the full resident population (including minors) while the sample comprises adults, the two figures are not directly comparable, and we do not claim overrepresentation of the higher-education group. The study does not apply post-stratification weights; the unweighted estimates should be interpreted as conditional on the achieved sample composition.
 
 
 \subsection{DCE Design and Implementation}
@@ -172,7 +172,7 @@ Institutional trust was measured using a five-point scale ranging from strong di
 
 To facilitate policy interpretation, we translated waiting-time sensitivity into marginal willingness to accept (MWTA), defined as the amount of compensation respondents would require to tolerate an additional month of waiting. MWTA was calculated for the full-sample mixed logit as the implied trade-off between waiting time and cash incentives, $\mathrm{MWTA} = -\frac{\beta_{\text{wait}}}{\beta_{\text{cash}}} \times \frac{SD_{\text{cash}}}{SD_{\text{wait}}}$, with the standardized coefficients converted back to RMB per month using the sample standard deviations ($SD_{\text{wait}} = 2.206$ months, $SD_{\text{cash}} = 311.5$ RMB; derivation in Appendix~E of the Online Supplementary Material). Confidence intervals were derived via the delta method on the original coefficient scale. MWTA for the trust-specific subgroups is reported in the Supplementary Material; these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
 
-All analyses were conducted in R using the \texttt{mlogit} package. The mixed logit was estimated with a normally distributed random coefficient on waiting time, 500 Halton draws, and respondent-level panel structure; full coefficient estimates are reported in Table~\ref{tab:main_model}. Additional robustness analyses, technical derivations, and supplementary figures are reported in the Online Supplementary Material (Sections~A--F).
+All analyses were conducted in R using the \texttt{mlogit} package. The mixed logit was estimated with a normally distributed random coefficient on waiting time, 500 Halton draws, and respondent-level panel structure; full coefficient estimates are reported in Table~\ref{tab:main_model}. Additional robustness analyses, technical derivations, and supplementary figures are reported in the Online Supplementary Material (Sections~A--F). A large language model (Kimi K3) was used for language editing, formatting assistance, code consistency checking, and manuscript critique; it was not used to perform statistical analyses or determine scientific interpretations. All code, numerical results, and final scientific interpretations were reviewed and verified by the authors.
 
 \section{Results}\label{sec:results}
 \subsection{Main Effect of Waiting Time}
@@ -325,10 +325,6 @@ Analysis code (R scripts) is available from the corresponding author upon reason
 
 \subsection*{Author Contributions}
 Not applicable for blinded peer review.
-
-\section*{Declaration of Generative AI Use}
-
-Generative artificial intelligence tools were used to assist with language editing, formatting, code and consistency checking, and manuscript critique. All statistical analyses, numerical results, and final scientific interpretations were performed and verified by the authors, who take full responsibility for the content of the manuscript.
 
 \section*{Ethics Approval and Informed Consent}
 
