@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\begin{document}
+
+\section*{Online Supplementary Material}
+\addcontentsline{toc}{section}{Online Supplementary Material}
+
+\input{appendix_a_pilot_test}
+\input{appendix_B_choice_card}
+\input{appendix_C_model_estimation}
+\input{appendix_D_subgroup_plots}
+\input{appendix_E_tradeoff_computation}
+\input{appendix_F_trust_subgroup}
+
+\end{document}

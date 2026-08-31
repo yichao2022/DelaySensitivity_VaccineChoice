@@ -35,18 +35,16 @@
 \maketitle
 \vspace{-1.5em}
 
-\begin{singlespace}
 \begin{abstract}
 \noindent
 \textbf{Background:} Waiting time before vaccination may discourage preventive health behavior, yet its role in vaccine choice has rarely been quantified. \\
 \textbf{Purpose:} This study examines how waiting time shapes vaccine preferences and explores heterogeneity in waiting-time sensitivity, including by institutional trust. \\
 \textbf{Methods:} A discrete choice experiment was administered to 1,027 adults in Wuhan, China. Respondents evaluated hypothetical vaccines varying in waiting time, effectiveness, side effects, origin, and cash incentives. Preferences were estimated using a panel mixed logit model with a respondent-specific random coefficient on waiting time. \\
 \textbf{Results:} Longer waiting times significantly reduced stated vaccine choice ($\beta = -0.30$, SE $= 0.028$, $p < 0.001$). Moving from 0 to 6 months of waiting reduced the predicted probability of vaccination from 71.3\% to 54.0\% ($-17.3$ percentage points; approximately 24\% relative reduction). The random-coefficient standard deviation (1.27) indicated substantial heterogeneity in waiting-time sensitivity. Exploratory moderation by institutional trust was mixed. \\
-\textbf{Conclusions:} Waiting time is a robust negative predictor of stated vaccine choice on average, with substantial heterogeneity in its magnitude. Because the data are stated preferences, the results identify sensitivity to waiting before vaccination rather than the mechanism underlying that sensitivity, and do not establish the magnitude or direction of hypothetical bias relative to actual vaccination behavior.
+\textbf{Conclusions:} Waiting time is a negative predictor of stated vaccine choice on average, with substantial heterogeneity in waiting-time sensitivity. Because the data are stated preferences, the results identify sensitivity to waiting before vaccination rather than the mechanism underlying that sensitivity, and do not establish the magnitude or direction of hypothetical bias relative to actual vaccination behavior.
 \end{abstract}
 
 \noindent\textbf{Keywords:} vaccine choice, waiting time, delay sensitivity, discrete choice experiment, institutional trust
-\end{singlespace}
 
 \clearpage
 
@@ -172,7 +170,7 @@ Institutional trust was measured using a five-point scale ranging from strong di
 
 \textbf{Preference heterogeneity.} Heterogeneity in waiting-time sensitivity was modeled using a respondent-specific Normal random coefficient on waiting time in the mixed logit (Section~\ref{sec:results_het} reports the estimated standard deviation). Exploratory moderation by institutional trust was evaluated using three approaches: subgroup-specific mixed logit estimates for low-, neutral-, and high-trust groups; a categorical interaction model with a joint Wald test on the two trust-by-waiting interaction coefficients; and a continuous-interaction specification with linear and quadratic trust terms, compared via a likelihood-ratio test. These trust analyses were treated as hypothesis-generating rather than as confirmatory tests of a specific moderation mechanism.
 
-To facilitate policy interpretation, we translated waiting-time sensitivity into marginal willingness to accept (MWTA), defined as the amount of compensation respondents would require to tolerate an additional month of waiting. MWTA was calculated for the full-sample mixed logit as the implied trade-off between waiting time and cash incentives ($-\beta_{\text{wait}}/\beta_{\text{cash}}$). Confidence intervals were derived via the delta method on the original coefficient scale. MWTA for the trust-specific subgroups is reported in the Supplementary Material; these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
+To facilitate policy interpretation, we translated waiting-time sensitivity into marginal willingness to accept (MWTA), defined as the amount of compensation respondents would require to tolerate an additional month of waiting. MWTA was calculated for the full-sample mixed logit as the implied trade-off between waiting time and cash incentives, $\mathrm{MWTA} = -\frac{\beta_{\text{wait}}}{\beta_{\text{cash}}} \times \frac{SD_{\text{cash}}}{SD_{\text{wait}}}$, with the standardized coefficients converted back to RMB per month using the sample standard deviations ($SD_{\text{wait}} = 2.206$ months, $SD_{\text{cash}} = 311.5$ RMB; derivation in Appendix~E of the Online Supplementary Material). Confidence intervals were derived via the delta method on the original coefficient scale. MWTA for the trust-specific subgroups is reported in the Supplementary Material; these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
 
 All analyses were conducted in R using the \texttt{mlogit} package. The mixed logit was estimated with a normally distributed random coefficient on waiting time, 500 Halton draws, and respondent-level panel structure; full coefficient estimates are reported in Table~\ref{tab:main_model}. Additional robustness analyses, technical derivations, and supplementary figures are reported in the Online Supplementary Material (Sections~A--F).
 
@@ -241,9 +239,9 @@ We further examined whether waiting-time sensitivity varied across institutional
 
 \subsection{Monetary Interpretation of Waiting-Time Burden}
 
-To facilitate interpretation, we converted waiting-time sensitivity into a monetary metric using the trade-off between waiting time and cash incentives estimated from the mixed logit model. Specifically, marginal willingness to accept (MWTA) expresses the amount of compensation respondents would require to tolerate an additional month of waiting. The full-sample estimate indicates that respondents require approximately \textbf{99 RMB per additional month of waiting} (95\% CI computed by the delta method: 80--118 RMB/month; full derivations are reported in the Online Supplementary Material, Section~E). This estimate provides convergent evidence that delay imposes a tangible and nontrivial monetary burden on vaccine choice. MWTA for the trust-specific subgroups is reported in the Online Supplementary Material (Section~E); these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
+To facilitate interpretation, we converted waiting-time sensitivity into a monetary metric using the trade-off between waiting time and cash incentives estimated from the mixed logit model. Specifically, marginal willingness to accept (MWTA) expresses the amount of compensation respondents would require to tolerate an additional month of waiting. The full-sample estimate indicates that respondents require approximately \textbf{99 RMB per additional month of waiting} (95\% CI computed by the delta method: 80--118 RMB/month; full derivations are reported in the Online Supplementary Material, Section~E). This estimate provides an interpretable monetary equivalent of the modeled waiting-time trade-off. MWTA for the trust-specific subgroups is reported in the Online Supplementary Material (Section~E); these subgroup MWTA estimates are interpreted as exploratory given that the continuous specification test did not support a systematic trust-by-waiting interaction.
 
-Across the full sample, respondents required positive monetary compensation to accept additional waiting time, indicating that delay imposed a meaningful perceived burden on vaccine choice. This suggests that reducing waiting time may be especially important for groups facing the highest perceived cost of delay; future studies could examine whether intervention effects vary according to independently measured delay sensitivity rather than relying on post-hoc subgroup partitions.
+Across the full sample, the model implied positive monetary compensation to accept additional waiting time, indicating that delay imposed a meaningful perceived burden on vaccine choice. This suggests that reducing waiting time may be especially important for groups facing the highest perceived cost of delay; future studies could examine whether intervention effects vary according to independently measured delay sensitivity rather than relying on post-hoc subgroup partitions.
 
 % elsarticle already handles front-matter pagination; avoid forcing an extra blank page here.
 
@@ -307,7 +305,7 @@ Finally, while the monetary interpretation of delay provides a useful policy met
 
 \subsection{Conclusion}
 
-This study provides exploratory evidence of delay sensitivity in stated vaccine choice among Wuhan adults. Longer delays reduce the likelihood of stated vaccine choice, even when other vaccine attributes remain constant. The substantial random-coefficient standard deviation ($\sigma = 1.272$) indicates meaningful heterogeneity in the magnitude of delay sensitivity across respondents, although the present data do not identify a discrete typology. Exploratory trust moderation was mixed and specification-dependent, and is therefore treated as hypothesis-generating rather than as evidence of a robust mechanism.
+This study provides exploratory evidence of delay sensitivity in stated vaccine choice among Wuhan adults. Longer delays reduce the likelihood of stated vaccine choice, even when other vaccine attributes remain constant. The substantial random-coefficient standard deviation ($\sigma = 1.272$) indicates meaningful heterogeneity in waiting-time sensitivity across respondents, although the present data do not identify a discrete typology. Exploratory trust moderation was mixed and specification-dependent, and is therefore treated as hypothesis-generating rather than as evidence of a robust mechanism.
 
 The results indicate a substantial stated-choice burden associated with waiting and meaningful modeled heterogeneity in delay sensitivity. Service-delivery timing may therefore be a behaviorally relevant feature of preventive care and warrants prospective testing against actual uptake. Future factorial experiments that independently vary waiting time, epidemic trajectory, and access certainty could help identify the mechanism underlying timing sensitivity.
 
@@ -341,37 +339,9 @@ The study involved anonymous, minimal-risk survey research conducted in China. A
 The data that support the findings of this study are not publicly available due to ethical and privacy considerations related to human-subject survey data. De-identified data may be made available from the corresponding author upon reasonable request, subject to approval by the relevant ethics committee.
 
 \clearpage
-\begingroup
-\singlespacing
 \printbibliography
-\endgroup
 
-% ==================== ONLINE SUPPLEMENTARY MATERIAL ====================
-\clearpage
-\section*{Online Supplementary Material}
-\addcontentsline{toc}{section}{Online Supplementary Material}
-
-% New refsection so the online supplement has its own reference list
-
-% Appendix A — Pilot Test
-\input{appendix_a_pilot_test}
-
-% Appendix B — Choice Card
-\input{appendix_B_choice_card}
-
-% Appendix C — Model Estimation
-\input{appendix_C_model_estimation}
-
-% Appendix D — Opt-out Specification
-\input{appendix_D_subgroup_plots}
-
-% Appendix E — Trade-off Computation
-\input{appendix_E_tradeoff_computation}
-
-% Appendix F — Trust Subgroup Analysis
-\input{appendix_F_trust_subgroup}
-
-% Note: The Online Supplementary Material does not contain independent references.
+% Online Supplementary Material: see supplement.tex
 % All references are included in the main manuscript reference list.
 
 
